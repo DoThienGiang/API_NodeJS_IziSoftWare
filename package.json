@@ -1,0 +1,25 @@
+{
+  "name": "volunteering_activities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "DoThienGiang",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.17.17",
+    "express": "^4.18.2",
+    "http-status": "^1.6.2",
+    "joi": "^17.9.1",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
