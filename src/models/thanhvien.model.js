@@ -1,6 +1,7 @@
-import mongoose from "mongoose";
+// const mongoose = require('mongoose');
+import mongoose from ('mongoose');
 
-const thanhvienSchema = mongoose.Schema(
+const thanhVienSchema = new mongoose.Schema(
     {
         HoTen: {
             type: String,
@@ -35,6 +36,9 @@ const thanhvienSchema = mongoose.Schema(
     }
 );
 
-const ThanhVien = mongoose.model("ThanhVien", thanhvienSchema);
+// const ThanhVien = mongoose.model("ThanhVien", thanhVienSchema);
+
+// module.exports = ThanhVien;
+const ThanhVien = mongoose.model("ThanhVien", thanhVienSchema);
 
 export default ThanhVien;

@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from ('mongoose');
 
-const thamgiaSchema = new mongoose.Schema(
+const thamGiaSchema = new mongoose.Schema(
     {
         thanhviens: [
             {
@@ -42,6 +42,6 @@ const thamgiaSchema = new mongoose.Schema(
     }
 );
 
-const ThamGia = mongoose.model("ThamGia", thamgiaSchema);
+const ThamGia = mongoose.model("ThamGia", thamGiaSchema);
 
 export default ThamGia;

@@ -1,12 +1,11 @@
-import { compile } from "joi";
-import pick from "../utils/pick";
+import Joi from "joi";
+import pick from "../utils/pick.js";
 
-
-const validate = (schema) => (req, res, next) => {
+export default (schema) => (req, res, next) => {
   const validSchem = pick(schema, ["params", "query", "body"]);
   const object = pick(req, Object.keys(validSchem));
 
-  const { value, error } = compile(validSchem)
+  const { value, error } = Joi.compile(validSchem)
     .prefs({ errors: { label: "key" }, abortEarly: false })
     .validate(object);
   if (error) {
@@ -18,5 +17,3 @@ const validate = (schema) => (req, res, next) => {
   Object.assign(req, value);
   return next();
 };
-
-export default validate;

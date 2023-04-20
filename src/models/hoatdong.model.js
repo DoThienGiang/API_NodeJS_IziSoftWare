@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from ('mongoose');
 
-const hoatdongSchema = new mongoose.Schema(
+const hoatDongSchema = mongoose.Schema(
     {
         thanhviens: [{
             type: Schema.Types.ObjectId,
@@ -49,6 +49,6 @@ const hoatdongSchema = new mongoose.Schema(
     }
 );
 
-const HoatDong = mongoose.model("HoatDong", hoatdongSchema);
+const HoatDong = mongoose.model("HoatDong", hoatDongSchema);
 
 export default HoatDong;

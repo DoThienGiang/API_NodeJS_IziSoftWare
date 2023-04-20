@@ -1,9 +1,5 @@
-/**
- * Create an object composed of the picked object properties
- * @param {Object} object
- * @param {string[]} keys
- * @returns {Object}
- */
+//Tạo một đối tượng bao gồm các thuộc tính đối tượng đã chọn
+
 const pick = (object, keys) => {
   return keys.reduce((obj, key) => {
     if (object && Object.prototype.hasOwnProperty.call(object, key)) {
@@ -14,4 +10,4 @@ const pick = (object, keys) => {
   }, {});
 };
 
-export default pick;
+module.exports = pick;
